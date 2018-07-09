@@ -24,7 +24,7 @@ npm run serve
 ```
 
 
-# 生成环境
+# 生产环境
 
 ## 编译
 在项目根目录编译生成`dist`文件目录，将该目录挂载到`nginx root`目录即可
@@ -35,6 +35,9 @@ npm run build
 
 ## nginx配置
 nginx需要配置范文后台API的路由代理,在文件`nginxConfig/default.conf`中
+
+[后台服务参见这里](https://github.com/guowenshuai/apiproject)
+
 ```
 location /api/ {
     proxy_pass	http://10.10.11.133:38080/;
