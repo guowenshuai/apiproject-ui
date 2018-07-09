@@ -51,3 +51,16 @@ docker run --name api-project-ui -d -v /home/gws/WebstormProjects/api-project-ui
 ```
 
 启动后访问`31080`端口
+
+
+# 项目打包成docker镜像
+
+根据上面的步骤，生成dist目录，修改好服务器配置项目，在项目下运行
+```
+docker build -t wenshuai/apiproject-ui
+```
+启动容器
+```
+docker run --name test-ui -p 33333:80 wenshuai/apiproject-ui
+```
+访问`33333`
